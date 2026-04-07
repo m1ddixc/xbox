@@ -5,340 +5,379 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
-  background: #464a4d;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+  background: #0e0f10;
+  color: #ffffff;
   overflow-x: hidden;
+  width: 100%;
 }
 
+
 header {
-  background: #373a3c;
-  padding: 1rem 2rem;
+  background: #101010;
+  padding: 0.75rem 1rem;
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 100;
+  left: 0;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid #2a2a2a;
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #107c10;
+nav img {
+  height: 32px;
+  width: auto;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.25rem;
+  order: 2;
 }
 
-nav a {
+nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #8dd83d;
+}
+
+.search {
+  order: 1;
+  flex: 1;
+  min-width: 120px;
 }
 
 .search input {
-  background: #ffffff;
-  border: none;
-  padding: 0.5rem 1rem;
-  color: #fff;
+  width: 100%;
+  background: #1e1e1e;
+  border: 1px solid #3a3a3a;
+  padding: 0.5rem 0.75rem;
+  border-radius: 24px;
+  color: white;
+  font-size: 0.8rem;
+  outline: none;
+}
+
+.search input::placeholder {
+  color: #aaa;
 }
 
 .my-xbox {
-  background: #373a3c;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  background: #1f1f1f;
+  padding: 0.4rem 0.9rem;
+  border-radius: 30px;
   font-weight: 500;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  order: 3;
+  border: 1px solid #3a3a3a;
 }
+
 .hero {
-  height: 640px;
+  height: 65vh;
+  min-height: 480px;
   background-image: url(/img/Star-Wars-Battlefront-II-combat.png);
+  background-size: cover;
+  background-position: center 30%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
-  margin-top: 80px;
+  margin-top: 70px;
+  background-color: #0a1a0f;
+}
+
+
+.hero-content {
+  padding: 1rem;
+  max-width: 90%;
 }
 
 .hero-content h1 {
-  font-size: 4rem;
-  margin-bottom: 2rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-size: clamp(1.8rem, 8vw, 3.8rem);
+  margin-bottom: 1.2rem;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.9);
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .hero-buttons {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .hero-buttons button {
-  background: #8DD83D;
-  color: white;
+  background: #8dd83d;
+  color: #000;
   border: none;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 40px;
   cursor: pointer;
-  font-weight: 500;
+  transition: transform 0.1s ease, background 0.2s;
+}
+
+.hero-buttons button:active {
+  transform: scale(0.96);
 }
 
 .value-section {
   max-width: 1400px;
-  margin: 4rem auto;
-  padding: 0 2rem;
+  margin: 3rem 1rem;
+  padding: 0;
 }
 
 .value-title {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
 }
 
-.xbox-icon {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #8DD83D;
-  margin-bottom: 1rem;
+.value-title img {
+  width: 48px;
+  margin-bottom: 0.5rem;
 }
 
 .value-title h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 0 1rem;
 }
 
 .card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 2rem;
+  background: #181a1c;
+  border-radius: 28px;
+  padding: 1.5rem;
   text-align: center;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid #444;
+  transition: all 0.2s;
+  border: 1px solid #2c2f33;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-}
-
-.mixer-logo {
-  font-size: 3rem;
-  font-weight: bold;
+  max-height: 140px;
+  object-fit: contain;
   margin-bottom: 1rem;
 }
 
 .card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #000;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
 }
 
 .card p {
-  color: #000;
+  color: #ccc;
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
 }
 
 .card button {
-  background: #8DD83D;
-  color: white;
+  background: #8dd83d;
+  color: #0a0a0a;
   border: none;
-  padding: 1rem;
-  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  border-radius: 60px;
+  font-weight: 700;
+  margin-top: 1.2rem;
+  width: 100%;
+  font-size: 0.85rem;
   cursor: pointer;
-  font-weight: 500;
-  margin-top: auto;
 }
 
-.header {
-background-image: url(/img/Rectangle\ \(3\).png);
-  padding: 20px 40px;
+.exclusive-section {
+  background: #0c0d0e;
+  margin-top: 2rem;
+}
+
+.exclusive-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  position: relative;
-  height: 400px;
-  background-size: cover;
+  align-items: baseline;
+  padding: 1.5rem 1rem 0.5rem 1rem;
+  flex-wrap: wrap;
 }
 
-.title-section {
-  display: flex;
-  align-items: center;
-  height: 400px;
+.title-exclusive {
+  font-size: clamp(1.4rem, 6vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.3px;
 }
 
-.title {
-  font-size: 28px;
-  font-weight: bold;
-  color: white;
-}
-
-.arrow {
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 15px solid white;
-  transform: rotate(90deg);
+.arrow-icon {
+  font-size: 1.8rem;
+  color: #8dd83d;
 }
 
 .games-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 40px;
-  max-width: 1400px;
-  margin: 0 auto;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  padding: 1rem 1rem 2rem 1rem;
 }
 
 .game-card {
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid #333;
-  border-radius: 8px;
+  background: #1e1f22;
+  border-radius: 24px;
   overflow: hidden;
-  transition: border-color 0.3s;
-  cursor: pointer;
-}
-
-.game-card:hover {
-  border-color: #8DD83D;
-}
-
-.game-image {
-  height: 200px;
-  background: linear-gradient(45deg, #1a1a1a, #333);
+  transition: 0.2s;
+  border: 1px solid #333;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  color: #888;
-  position: relative;
+  flex-direction: column;
 }
 
-.game-image::before {
-  content: attr(data-icon);
-  font-size: 48px;
+.game-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  background: #2a2e34;
+  display: block;
 }
 
 .game-title {
-  padding: 15px;
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
+  padding: 0.8rem 1rem 0.2rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .game-subtitle {
-  padding: 0 15px 15px;
-  font-size: 14px;
-  color: #ccc;
-  text-align: center;
+  padding: 0 1rem 0.5rem 1rem;
+  font-size: 0.8rem;
+  color: #b0b3b8;
 }
 
 .see-details {
-  background: #8DD83D;
+  background: #8dd83d;
   color: #000;
   border: none;
-  padding: 10px 20px;
-  margin: 0 15px 15px;
-  border-radius: 4px;
-  font-weight: 600;
+  margin: 0.5rem 1rem 1rem 1rem;
+  padding: 0.7rem;
+  border-radius: 40px;
+  font-weight: 700;
   cursor: pointer;
-  width: calc(100% - 30px);
+  font-size: 0.85rem;
 }
 
-.store-section {
-  background: rgba(255, 255, 255, 0.1);
-  text-align: center;
-  padding: 20px;
-  font-size: 18px;
-  font-weight: 600;
+.xbox-store-btn {
+  display: flex;
+  justify-content: center;
+  margin: 0 1rem 2rem 1rem;
+}
+
+.xbox-store-btn button {
+  background: #8dd83d;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 60px;
+  width: 100%;
+  max-width: 280px;
+  color: #000;
+  cursor: pointer;
 }
 
 .design-lab {
-  background-image: url(/img/Rectangle\ \(4\).png);
-  padding: 60px 100px;
+  background-size: cover;
+  background-blend-mode: overlay;
+  padding: 2.5rem 1.5rem;
   text-align: center;
-  position: relative;
-  height:480px;
+  margin-top: 1rem;
 }
 
 .design-title {
-  font-size: 48px;
-  font-weight: 300;
-  margin-bottom: 20px;
-  line-height: 1.2;
-  margin-right: 1000px;
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
 }
 
 .design-subtitle {
-  font-size: 20px;
-  color: #fff;
-  margin-bottom: 40px;
-  max-width: 600px;
-  margin-left: 50;
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
   margin-right: auto;
+  line-height: 1.4;
 }
 
 .design-buttons {
   display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
-  margin-right: 1000px;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
 
 .btn {
-  padding: 15px 30px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: 600;
+  padding: 0.9rem 1.2rem;
+  border-radius: 60px;
+  font-weight: 700;
+  width: 100%;
+  max-width: 280px;
+  font-size: 0.9rem;
   cursor: pointer;
+  border: none;
 }
 
 .btn-primary {
-  background: #000;
-  color: #fff;
-}
-
-.btn-success {
-  background: #8DD83D;
+  background: #ffffff;
   color: #000;
 }
 
+.btn-success {
+  background: #8dd83d;
+  color: #000;
+}
+
+/* footer */
 .footer {
-  background: #1a1a1a;
-  padding: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-  max-width: 2200px;
-  margin: 0 auto;
+  background: #0b0c0e;
+  padding: 2rem 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-section {
+  text-align: center;
 }
 
 .footer-section h4 {
-  margin-bottom: 20px;
-  color: #8DD83D;
+  color: #8dd83d;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 .footer-section ul {
@@ -346,53 +385,36 @@ background-image: url(/img/Rectangle\ \(3\).png);
 }
 
 .footer-section li {
-  margin-bottom: 10px;
-  color: #888;
-  cursor: pointer;
-}
-
-.footer-section li:hover {
-  color: white;
+  color: #aaa;
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
 }
 
 .social-icons {
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
 }
 
 .social-icon {
-  width: 32px;
-  height: 32px;
-  background: #333;
+  width: 42px;
+  height: 42px;
+  background: #242628;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
 }
 
 .copyright {
-  grid-column: 1 / -1;
   text-align: center;
-  padding-top: 40px;
-  color: #666;
-  border-top: 1px solid #333;
-}
-
-@media (max-width: 1200px) {
-  .games-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .games-grid {
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
-
-  .footer {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+  color: #6a6e72;
+  font-size: 0.7rem;
+  padding-top: 1rem;
+  border-top: 1px solid #222;
+  margin-top: 0.5rem;
 }

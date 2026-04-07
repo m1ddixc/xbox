@@ -1,158 +1,157 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fff;
-    background: #464a4d;
-    overflow-x: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  background: #464a4d;
+  overflow-x: hidden;
 }
 
 header {
-    background: #373A3C;
-    padding: 1rem 2rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
+  background: #373a3c;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #107c10;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #107c10;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
+  display: flex;
+  list-style: none;
+  gap: 2rem;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .search input {
-    background: #ffffff;
-    border: none;
-    padding: 0.5rem 1rem;
-    color: #fff;
+  background: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
 }
 
 .my-xbox {
-    background: #373A3C;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: 500;
+  background: #373a3c;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
 }
 .hero {
-    height: 640px;
-    background-image:url(/img/Star-Wars-Battlefront-II-combat.png);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    margin-top: 80px;
+  height: 640px;
+  background-image: url(/img/Star-Wars-Battlefront-II-combat.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin-top: 80px;
 }
 
 .hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .hero-buttons button {
-    background: #107c10;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
+  background: #8DD83D;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
 .value-section {
-    max-width: 1400px;
-    margin: 4rem auto;
-    padding: 0 2rem;
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 0 2rem;
 }
 
 .value-title {
-    text-align: center;
-    margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .xbox-icon {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #107c10;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #8DD83D;
+  margin-bottom: 1rem;
 }
 
 .value-title h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
 }
 
 .card {
-    background: #fff;
-    border-radius: 10px;
-    padding: 2rem;
-    text-align: center;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid #444;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #444;
 }
 
 .card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
 .mixer-logo {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #000;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #000;
 }
 
 .card p {
@@ -160,29 +159,240 @@ nav a {
 }
 
 .card button {
-    background: #107c10;
-    color: white;
-    border: none;
-    padding: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
-    margin-top: auto;
+  background: #8DD83D;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: auto;
 }
 
+.header {
+background-image: url(/img/Rectangle\ \(3\).png);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 400px;
+  background-size: cover;
+}
 
+.title-section {
+  display: flex;
+  align-items: center;
+  height: 400px;
+}
 
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
 
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid white;
+  transform: rotate(90deg);
+}
 
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
+.game-card {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+  cursor: pointer;
+}
 
+.game-card:hover {
+  border-color: #8DD83D;
+}
 
+.game-image {
+  height: 200px;
+  background: linear-gradient(45deg, #1a1a1a, #333);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #888;
+  position: relative;
+}
 
+.game-image::before {
+  content: attr(data-icon);
+  font-size: 48px;
+}
 
+.game-title {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
 
+.game-subtitle {
+  padding: 0 15px 15px;
+  font-size: 14px;
+  color: #ccc;
+  text-align: center;
+}
 
+.see-details {
+  background: #8DD83D;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 15px 15px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  width: calc(100% - 30px);
+}
 
+.store-section {
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
 
+.design-lab {
+  background-image: url(/img/Rectangle\ \(4\).png);
+  padding: 60px 100px;
+  text-align: center;
+  position: relative;
+  height:480px;
+}
 
+.design-title {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  margin-right: 1000px;
+}
 
+.design-subtitle {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: 50;
+  margin-right: auto;
+}
 
+.design-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  margin-right: 1000px;
+}
+
+.btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #000;
+  color: #fff;
+}
+
+.btn-success {
+  background: #8DD83D;
+  color: #000;
+}
+
+.footer {
+  background: #1a1a1a;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 2200px;
+  margin: 0 auto;
+}
+
+.footer-section h4 {
+  margin-bottom: 20px;
+  color: #8DD83D;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+  color: #888;
+  cursor: pointer;
+}
+
+.footer-section li:hover {
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  background: #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.copyright {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding-top: 40px;
+  color: #666;
+  border-top: 1px solid #333;
+}
+
+@media (max-width: 1200px) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .games-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
